@@ -1,56 +1,445 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html, h1, h2, h3, h4, h5, h6, p { font-size: 100%; padding: 0; margin: 0; height:100%;}
+a, li{ text-decoration: none; color:white;}
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; } 
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
 
-body, h1, h2, h3, h4, h5, h6, p{
-    margin:0;
-    padding:0;
-} 
 body{
-    overflow-x: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
-.mainWrapper{
-    width: 100%;
+.Navigation{
+    width:100%;
+    height:80px;
+    background-color: #960258;
+    float:left;
+    position:fixed;
+    z-index:999;
+    
+}
+.logo{
+    width:80px;
+    height:80px;
+    float:left;
+    margin-left:5%;
+    overflow: hidden;
+}
+.logo img{
+    width:100%;
     height:100%;
-    padding: 2px;
-    background-color: rgb(39, 39, 39);
+}
+.logo h2{
+    color:white;
+}
+.logoName{
+    width:auto;
+    height:50px;
+    float:left;
+    padding: 5px;
+}
+.logoName h1{
+    color:white;
+    font-size:48px;
+}
+.bar{
+    width:auto;
+    height:80px;
+    float:right;
+    margin-right: 5%;
+}
+.bar p{
+    height:80px;
+    width:80px;
+    padding: 10px;
+    padding-top:50px;
+    display: inline-block;
+}
+.bar a{
+    
+}
+.bar a:hover p{
+    color:#960258;
+    background-color: white;
+    -webkit-transition-duration:1s; 
 }
 
-.formWrapper{
-    width:500px;
-    height:auto;
-    padding:5px;
-    background-color:#f1f1f1;
-    margin: 0 auto;
+.slideImage{
+    width:100%;
+    height:580px;
+    margin-top:80px;
+    background-image: url(../src/misc/images/slide.jpg);
+    background-size:cover;
+    background-position: fixed;
+    float:left;
+    overflow: hidden;
 }
-.formWrapper h1{
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
+.welcomeText{
+    width: 100%;
+    height:500px;
+    background-color: rgba(54, 54, 54, 0.5);
+    float:left;
+    overflow: hidden;
 }
-.formWrapper p{
-    display: block;
-    padding: 5px;
-    font-weight:bold;
-    margin-top:10px;
-}
-.formWrapper input[type="text"], [type="password"], [type="number"]{
-    display: block;
-    width:95%;
-    padding:5px;
-}
-.formWrapper input[type="radio"]{
-    width:10%;
-    padding:5px;
-}
-lable{
-    font-weight:bold;
-}
-.formWrapper input[type="submit"]{
-    background-color: blueviolet;
-    border:none;
-    width:250px;
-    height:50px;
+.welcomeText h1{
     color:white;
-    font-weight:bold;
+    font-size:42px;
     display: block;
-    margin: 0 auto;
-    cursor: pointer;
+    text-align: center;
+    height:auto;
+    padding:20px;
+    margin-top:100px;
 }
+.searchBar{
+    width:500px;
+    height:40px;
+    background-color: white;
+    float:left;
+    margin-left: 32%;
+    margin-top: 40px;
+}
+.searchBar input {
+    width:500px;
+    border:none;
+    margin: 0;
+    padding:10px;
+    height:40px;
+    color:#960258;
+    font-weight: bold;
+    font-size:20px;
+}
+.button{
+    border:none;
+    margin: 25px 180px;
+    width:200px;
+    height:40px;
+    background-color: #960258;
+    color:white;
+    font-size:24px;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top:2px;
+    overflow: hidden;
+}
+.button img{
+    width:30px;
+    height:30px;
+
+}
+.Sicon{
+    font-size:28px;
+    float:right;
+    margin-top:5px;
+    margin-right:10px;
+}
+.userCount{
+    width:100%;
+    height:80px;
+    background-color:rgba(51, 51, 51, 0.8);
+    float:left;
+    border-top:2px solid #960258;
+    padding-left:20%;
+}
+.countBox{
+    width:20%;
+    height:100%;
+    color:white;
+    font-size:24px;
+    padding-top:25px;
+    text-align: center;
+    float:left;
+    margin-right:10%; 
+}
+.howIts{
+    width:100%;
+    height:auto;
+    float:left;
+    background-color: rgb(243, 243, 243);
+}
+.boxHow{
+    width:25%;
+    height:100%;
+    float:left;
+}
+.IMG{
+    width:100%;
+    height:200px;
+    float:left;
+}
+.IMG img{
+    width:60%;
+    height:100%;
+    margin-left:20%;
+}
+.boxHow p{
+    display: block;
+    height:50px;
+    width:100%;
+    float: left;
+    margin-top:25px;
+    text-align: center;
+    color:rgb(39, 38, 38);
+    font-size:20px;
+    font-weight:bold;
+    padding-top:10px;
+    margin-bottom: 10px
+}
+.desc p{
+    float:left;
+    color:rgb(39, 38, 38);
+    font-size:14px;
+}
+.delTime{
+    width:100%;
+    height:250px;
+    float:left;
+    background-color: #960258;
+    padding-left:25%;
+    overflow: hidden;
+}
+.delTime h2{
+    color:white;
+    float:left;
+    margin-top: 10%;
+    font-size:40px;
+    padding:0;
+    height:auto;
+}
+.delTime p{
+    color:white;
+    font-size:150px;
+    float:left;
+    margin-top:2%;
+    height:100px;
+    display: block;
+}
+.resContainer{
+    width:100%;
+    height:auto;
+    float:left;
+    padding-bottom:10px;
+}
+.heading{
+    width:30%;
+    height:auto;
+    float:left;
+    margin-left: 35%;
+    text-align: center;
+    margin-top:25px;
+}
+.heading p{
+    font-size:36px;
+    font-weight:bold;
+    padding-bottom: 5px;
+    /* -webkit-box-shadow: 3px 3px 5px 3px #ccc; */
+}
+.line{
+    border-bottom:5px solid #960258;
+    width:30%;
+    height:auto;
+    float:left;
+    margin-top:10px;
+    -webkit-box-shadow: 3px 3px 5px 3px #ccc;
+    margin-left: 35%;
+    margin-bottom:20px;
+}
+.resInner{
+    width:100%;
+    height:480px;
+    float:left;
+    transition: .5s ease;
+    overflow: hidden;
+}
+/* 1 box for resturant */
+
+.resBox{
+    width:19%;
+    height:240px;
+    background-color: #ccc;
+    transition: .5s ease;
+    float:left;
+    margin:5px;
+    background-position: cover;
+    background-size: 150%;
+    position: relative;
+    /* background-image: url(./misc/images/lalqila.jpg) */
+}
+.resBox img{
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+.resCaption{
+    width:100%;
+    height:0px;
+    background-color:rgba(150, 02, 88, 0.8);
+    float:left;
+    -webkit-transition-duration:1s;
+    position:absolute;
+}
+.resBox:hover .resCaption{
+    height:100%;
+    -webkit-transition-duration:1s;
+    overflow: hidden;
+}
+.visitBtn{
+    width:100px;
+    background-color: white;
+    float:left;
+    margin-top: 35%;
+    margin-left: 30%;
+    height:0px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.2s;
+}
+.resBox:hover .visitBtn{
+    height:50px;
+    width:100px;
+    -webkit-transition-duration: 1s;
+    float:left;
+}
+.resBox:hover .visitBtn p{
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+    color:#960258;
+    margin-top:15px;
+}
+.visitBtn p{
+    text-align: center;
+    font-size:0px;
+    font-weight:bold;
+    color:#960258;
+    -webkit-transition-duration: 0.2s;
+    margin-top:15px;
+}
+.descreption p{
+    color:white;
+    font-size:24px;
+    padding: 10px;
+    font-weight:bold;
+}
+/* 1 box for resturant */
+
+.footer{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    background-color: rgb(41, 40, 40);
+    float:left;
+}
+.footerRight{
+    width:25%;
+    height:100%;
+    float:right;
+    /* background-color: rgb(41, 40, 40); */
+}
+.footerRight img{
+    width:50%;
+    height:50%;
+    margin-left:30%;
+    margin-top:30%;
+}
+.footerRight h1{
+    color:white;
+    font-size:36px;
+    margin-left:40%;
+    margin-top: -5%;
+}
+.leftWrapper{
+    width:70%;
+    height:300px;
+    margin-top:5%;
+    margin-left:5%;
+}
+.address{
+    width:100%;
+    height:40px;
+    padding:10px;
+    background-color: #960258;
+    float:left;
+    color:white;
+    text-align: left;
+    margin-top:5%;
+}
+.fBox{
+    width:30%;
+    height:300px;
+    float:left;
+}
+.fBox h3{
+    color:white;
+    width:200px;
+    height:auto;
+    padding:10px;
+    font-size:20px;
+    border-bottom:1px solid #960258;
+}
+.fBox ul{
+    margin-top:30px;
+    padding: 0;
+}
+.fBox ul li {
+    margin:10px;
+    list-style: none;
+    color:#ccc;
+    font-size: 18px;
+} 
+.formWrapper{
+    width:100%;
+    height:720px;
+    float:left;
+    padding-top:20%;
+}
+.formInner{
+    width:30%;
+    height:85%;
+    float:left;
+    border-top:4px solid #960258;
+    margin-left:40%;
+    background-color: rgb(226, 224, 224);
+}
+.formInner h1{
+    height:auto;
+    text-align: center;
+    font-size:24px;
+    padding:10px;
+}
+
+.formInner p{
+    width:90%;
+    height:40px;
+    margin-left:5%;
+    float:left;
+    color:rgb(90, 88, 88);
+    padding:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+.formInner input{
+    width:90%;
+    height:40px;
+    margin-left:5%;
+    color:#960258;
+    float:left;
+    border:none;
+    font-size:18px;
+    padding:10px;
+    margin-bottom:25px;
+    border:1px solid rgb(124, 123, 123);
+}
+.loginBtn{
+    width: 200px;
+    height:40px;
+    clear:both;
+    float:left;
+    margin-left:25%;
+    margin-top:10px;
+    background-color: #960258;
+}
+.loginBtn p{
+    color:white;
+    margin:0;
+    text-align: center;
+}
+/*  */

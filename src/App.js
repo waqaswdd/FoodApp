@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 import './Custom.css';
-import Registration from './component/form';
+import MyRoutes from "./config/router"
+// import Slider from './component/Slider';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGhost, faSearch, faTruck } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faGhost, faSearch, faTruck)
 
 class App extends React.Component {
   render() {
     return (
       <div className="mainWrapper">
-        <Registration></Registration>
+        <MyRoutes></MyRoutes>
       </div>
     );
   }
