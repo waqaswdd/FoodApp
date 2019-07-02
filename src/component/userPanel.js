@@ -10,6 +10,11 @@ class userPanel extends Component
     constructor(){
         super();
     }
+    logout() {
+        localStorage.clear();
+        window.location.href = '/';
+    
+    }
         render(){
 
     
@@ -28,7 +33,7 @@ class userPanel extends Component
                     <input type="text" placeholder="Search by category"/>
                 </div>
                 <div className="sBtn"><p><a href="">Search</a></p></div>
-                <p><a href="">Logout</a></p>
+                <div className="lBtn"><p onClick={this.logout}>Logout</p></div>
                 <h4>Muhammad Waqas</h4>
             </div>
             <div className="viewPanel">

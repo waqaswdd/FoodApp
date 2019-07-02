@@ -1,19 +1,15 @@
 import React from 'react';
 import '../Custom.css';
 import Navbar from '../component/Navigation';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGhost, faSearch } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../component/Footer';
-import Signup from '../component/signUp';
-
-library.add(faGhost, faSearch)
+import Signup from '../component/ResSignUp';
 
 class Login extends React.Component {
   render() {
     return (
       <div className="mainWrapper">
         <Navbar></Navbar>
-        <Signup {...this.props}></Signup>
+        <ResSignUp {...this.props}></ResSignUp>
         <Footer></Footer>
       </div>
     );

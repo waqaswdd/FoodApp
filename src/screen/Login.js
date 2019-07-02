@@ -13,7 +13,7 @@ class Login extends React.Component {
     return (
       <div className="mainWrapper">
         <Navbar></Navbar>
-        <Login1></Login1>
+        <Login1 {...this.props}/>
         <Footer></Footer>
       </div>
     );

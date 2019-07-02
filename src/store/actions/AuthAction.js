@@ -21,6 +21,7 @@ function SignupUser(userdetails){
             city: userdetails.city,
             password: userdetails.password,
         }
+        userdetails.router.push('./login');
         firebaseRef.child(uid).set(userData);
     }).catch((error) => {
         var errorMessage = error.message;

@@ -5,7 +5,7 @@ import {SignupUser} from '../store/actions/AuthAction';
 
 
 
-class signUpForm extends Component
+class ResSignUpForm extends Component
 
 {
     constructor(){
@@ -14,7 +14,7 @@ class signUpForm extends Component
         this.userSignUp=this.userSignUp.bind(this);
     }
     
-    userSignUp(){
+    ResSignUp(){
         const {
             firstName,
             lastName,
@@ -37,7 +37,7 @@ class signUpForm extends Component
             passwordConfirm,
             router:this.props.history
         }
-        SignupUser(useDetails)
+        SignupRes(useDetails)
         
     }
 
@@ -49,16 +49,15 @@ class signUpForm extends Component
         <div className="signUpWrapper">
             {/* <form action="JavaScript:void(0)" onSubmit={SignupUser}> */}
             <div className="signUpInner">
-                <form>
                 <h1>Create Account</h1>
                     <p>First Name</p>
-                    <input onChange={(e) => { this.setState({ firstName: e.target.value }) }} type="text" placeholder="Enter First name" required/>
+                    <input onChange={(e) => { this.setState({ firstName: e.target.value }) }} type="text" placeholder="Enter First name"/>
                     <p>Last Name</p>
-                    <input onChange={(e) => { this.setState({ lastName: e.target.value }) }} type="text" placeholder="Enter Last name" required/>
+                    <input onChange={(e) => { this.setState({ lastName: e.target.value }) }} type="text" placeholder="Enter Last name"/>
                     <p>Enter Email</p>
-                    <input onChange={(e) => { this.setState({ email: e.target.value }) }}type="text" placeholder="Enter Last name" required/>
+                    <input onChange={(e) => { this.setState({ email: e.target.value }) }}type="text" placeholder="Enter Last name"/>
                     <p>Enter Address</p>
-                    <input onChange={(e) => { this.setState({ address: e.target.value }) }} type="text" placeholder="Enter Address" required/>
+                    <input onChange={(e) => { this.setState({ address: e.target.value }) }} type="text" placeholder="Enter Address"/>
                     <p>Select Gender</p>
                     <select>
                         <option>Select Gender</option>
@@ -66,9 +65,9 @@ class signUpForm extends Component
                         <option>Female</option>
                     </select>
                     <p>Age</p>
-                    <input onChange={(e) => { this.setState({ age: e.target.value }) }} type="number" placeholder="Set Your Age" required/>
+                    <input onChange={(e) => { this.setState({ age: e.target.value }) }} type="number" placeholder="Set Your Age"/>
                     <p>Select Country</p>
-                    <select required>
+                    <select>
                         <option>Select Country</option>
                         <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -316,21 +315,22 @@ class signUpForm extends Component
                 <option value="Zimbabwe">Zimbabwe</option>
                 </select>
                 <p>Enter City</p>
-                <input onChange={(e) => { this.setState({ city: e.target.value }) }} type="text" placeholder="Enter City Name" required/>
+                <input onChange={(e) => { this.setState({ city: e.target.value }) }} type="text" placeholder="Enter City Name"/>
                 <p>Enter Password</p>
-                <input onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" placeholder="Enter Password" required/>
+                <input onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" placeholder="Enter Password"/>
                 <p>Confirm Password</p>
-                <input onChange={(e) => { this.setState({ passwordConfirm: e.target.value }) }} type="password" placeholder="Confirm Password" required/>
+                <input onChange={(e) => { this.setState({ passwordConfirm: e.target.value }) }} type="password" placeholder="Confirm Password"/>
                 <div className="signupBtn">
-                    <p onClick={this.userSignUp}>Signup </p>
+                    <p onClick={this.ResSignUp}>Signup </p>
                 </div>
 
-            </form>
+
             </div>
+            {/* </form> */}
         </div>
         
     );
 }
 }
 
-export default signUpForm;
+export default ResSignUpForm;

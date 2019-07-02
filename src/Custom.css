@@ -428,6 +428,19 @@ body{
     margin-bottom:25px;
     border:1px solid rgb(124, 123, 123);
 }
+.formInner span{
+    color:red;
+    height:auto;
+    float:left;
+    width:50%;
+    margin-top:-20px;
+    margin-left:25px;
+    display: none;
+}
+form{
+    padding:0;
+    margin: 0;
+}
 .loginBtn{
     width: 200px;
     height:40px;
@@ -435,12 +448,23 @@ body{
     float:left;
     margin-left:25%;
     margin-top:10px;
-    background-color: #960258;
 }
-.loginBtn p{
+.loginBtn input[type=submit]{
     color:white;
     margin:0;
+    background-color: #960258;
+    width:100%;
     text-align: center;
+    border:none;
+    cursor: pointer;
+}
+.signupBtn input[type=submit]{
+    color:white;
+    margin:0;
+    background-color: #960258;
+    width:100%;
+    text-align: center;
+    border:none;
     cursor: pointer;
 }
 .formInner .signup{
@@ -492,6 +516,20 @@ body{
     border:none;
     margin-bottom:10px;
 }
+.signUpInner span{
+    width:150px;
+    padding:10px;
+    float: left;
+}
+.signUpInner input[type="radio"]{
+    width:40px;
+    height:20px;
+    float:left;
+}
+.signUpInner input[type="radio"]:hover{
+    background-color: red;
+}
+
 .signupBtn{
     width:200px;
     height:40px;
@@ -573,11 +611,19 @@ body{
     float:left;
     background-color: #333333;
 }
-.logOut p{
-    width:100px;
-    height:auto;
+.lBtn{
+    background-color: #333333;
     float:right;
-    text-align: center
+}
+.lBtn p{
+    padding:15px;
+    color:white;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+}
+.lBtn p:hover{
+    background-color: #1a1a1a;
+    -webkit-transition-duration: 1s;
 }
 .logOut p a{
     color:#fff;
