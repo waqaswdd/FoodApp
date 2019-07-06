@@ -1,11 +1,10 @@
 import React,{Component} from 'react';
 import '../Custom.css';
-import KFC from '../misc/images/KFC_logo.png';
-import ResturantList from './ResturantThumb';
+import AddFood from '../component/AddFood';
 
 
 
-class userPanel extends Component
+class resPanel extends Component
 
 {
     constructor(){
@@ -23,10 +22,10 @@ class userPanel extends Component
         <div className="panelWrapper">
             <div className="sideBar">
                 <div className="sideNav">
-                    <p>Resturants</p>
+                    <p>Add Food</p>
                 </div>
                 <div className="sideNav1">
-                    <p>My Requests</p>
+                    <p>My Foods</p>
                 </div>
             </div>
             <div className="logOut">
@@ -35,12 +34,12 @@ class userPanel extends Component
                 </div>
                 {/* <div className="sBtn"><p><a href="">Search</a></p></div> */}
                 <div className="lBtn"><p onClick={this.logout}>Logout</p></div>
-                <h4>Muhammad Waqas</h4>
+                <h4>Resturant Name</h4>
             </div> 
-            <ResturantList/>
+            <AddFood />
         </div>
     );
 }
 }
 
-export default userPanel;
+export default resPanel;

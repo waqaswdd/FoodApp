@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import '../Custom.css';
 import {SignupUser} from '../store/actions/AuthAction';
+import { Link } from 'react-router-dom'
 
 
 
@@ -56,7 +57,7 @@ class signUpForm extends Component
                     <p>Last Name</p>
                     <input onChange={(e) => { this.setState({ lastName: e.target.value }) }} type="text" placeholder="Enter Last name" required/>
                     <p>Enter Email</p>
-                    <input onChange={(e) => { this.setState({ email: e.target.value }) }}type="text" placeholder="Enter Last name" required/>
+                    <input onChange={(e) => { this.setState({ email: e.target.value }) }}type="email" placeholder="Enter Email" required/>
                     <p>Enter Address</p>
                     <input onChange={(e) => { this.setState({ address: e.target.value }) }} type="text" placeholder="Enter Address" required/>
                     <p>Select Gender</p>
@@ -323,9 +324,10 @@ class signUpForm extends Component
                 <input onChange={(e) => { this.setState({ passwordConfirm: e.target.value }) }} type="password" placeholder="Confirm Password" required/>
                 <div className="signupBtn">
                     <p onClick={this.userSignUp}>Signup </p>
+                    {/* <input type="submit" onSubmit={this.userSignUp}/> */}
                 </div>
-
             </form>
+            <p className="resBtn">Want to register your resturant? <Link to="/ResturantForm"><font color='blue'>REGISTER RESTURANT</font></Link></p>
             </div>
         </div>
         
